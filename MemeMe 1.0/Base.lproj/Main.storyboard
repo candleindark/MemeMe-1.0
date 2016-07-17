@@ -80,6 +80,9 @@
                             <constraint firstItem="0Fm-5Y-nln" firstAttribute="top" secondItem="HIl-ew-Moq" secondAttribute="bottom" id="sXl-Hh-xbE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="t7K-gK-mXF" id="fnm-Ab-Xbt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,6 +10,10 @@ import UIKit
 
 class MemeEditorController: UIViewController {
 
+    // Mark: Outlets
+    @IBOutlet weak var cameraButton: UIBarButtonItem!
+    
+    
     // MARK: UIViewController methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +22,8 @@ class MemeEditorController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
     }
     
     
