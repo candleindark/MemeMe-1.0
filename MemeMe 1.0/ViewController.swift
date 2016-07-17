@@ -13,6 +13,9 @@ class MemeEditorController: UIViewController {
     // Mark: Outlets
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     
+    // Mark: Private attributes
+    private let imagePickerController = UIImagePickerController()
+    
     
     // MARK: UIViewController methods
     override func viewDidLoad() {
@@ -25,6 +28,7 @@ class MemeEditorController: UIViewController {
         
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
     }
+    
     
     
 }
