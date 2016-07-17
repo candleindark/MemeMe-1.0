@@ -27,11 +27,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HIl-ew-Moq">
                                 <rect key="frame" x="20" y="64" width="560" height="492"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xbt-hr-5Xa">
-                                        <rect key="frame" x="160" y="271" width="240" height="128"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xbt-hr-5Xa">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="492"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="xbt-hr-5Xa" firstAttribute="leading" secondItem="HIl-ew-Moq" secondAttribute="leading" id="URe-t7-yhc"/>
+                                    <constraint firstAttribute="trailing" secondItem="xbt-hr-5Xa" secondAttribute="trailing" id="es9-Oq-ESH"/>
+                                    <constraint firstItem="xbt-hr-5Xa" firstAttribute="top" secondItem="HIl-ew-Moq" secondAttribute="top" id="f53-DB-vOF"/>
+                                    <constraint firstAttribute="bottom" secondItem="xbt-hr-5Xa" secondAttribute="bottom" id="xAe-zA-z3v"/>
+                                </constraints>
                             </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vWi-9I-HCp">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
