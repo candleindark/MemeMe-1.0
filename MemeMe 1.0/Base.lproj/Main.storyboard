@@ -30,12 +30,26 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xbt-hr-5Xa">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="492"/>
                                     </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PU6-m9-Jo1">
+                                        <rect key="frame" x="268" y="50" width="25" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NCs-G8-DXv">
+                                        <rect key="frame" x="268" y="397" width="25" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="PU6-m9-Jo1" firstAttribute="centerX" secondItem="HIl-ew-Moq" secondAttribute="centerX" id="HbE-jf-RMv"/>
+                                    <constraint firstAttribute="bottom" secondItem="NCs-G8-DXv" secondAttribute="bottom" constant="65" id="QFS-S0-pWg"/>
                                     <constraint firstItem="xbt-hr-5Xa" firstAttribute="leading" secondItem="HIl-ew-Moq" secondAttribute="leading" id="URe-t7-yhc"/>
+                                    <constraint firstItem="PU6-m9-Jo1" firstAttribute="top" secondItem="HIl-ew-Moq" secondAttribute="top" constant="50" id="UxX-rU-nj4"/>
                                     <constraint firstAttribute="trailing" secondItem="xbt-hr-5Xa" secondAttribute="trailing" id="es9-Oq-ESH"/>
                                     <constraint firstItem="xbt-hr-5Xa" firstAttribute="top" secondItem="HIl-ew-Moq" secondAttribute="top" id="f53-DB-vOF"/>
+                                    <constraint firstItem="NCs-G8-DXv" firstAttribute="centerX" secondItem="HIl-ew-Moq" secondAttribute="centerX" id="rid-47-tNi"/>
                                     <constraint firstAttribute="bottom" secondItem="xbt-hr-5Xa" secondAttribute="bottom" id="xAe-zA-z3v"/>
                                 </constraints>
                             </view>
