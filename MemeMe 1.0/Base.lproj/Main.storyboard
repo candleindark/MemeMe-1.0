@@ -18,14 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Fm-5Y-nln">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vWi-9I-HCp">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="XRi-2i-2LM"/>
-                                    <barButtonItem title="Item" id="t7K-gK-mXF"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Dr5-tK-sSs"/>
-                                    <barButtonItem title="Item" id="PSX-VB-80v"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="hKl-lF-22g"/>
+                                    <barButtonItem systemItem="action" id="twN-FV-3Nz"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="2xo-Ok-Rue"/>
+                                    <barButtonItem systemItem="cancel" id="kBn-aI-89S"/>
                                 </items>
                             </toolbar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HIl-ew-Moq">
@@ -57,12 +55,14 @@
                                     <constraint firstAttribute="bottom" secondItem="xbt-hr-5Xa" secondAttribute="bottom" id="xAe-zA-z3v"/>
                                 </constraints>
                             </view>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vWi-9I-HCp">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Fm-5Y-nln">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem title="Item" id="twN-FV-3Nz"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="2xo-Ok-Rue"/>
-                                    <barButtonItem title="Item" id="kBn-aI-89S"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="XRi-2i-2LM"/>
+                                    <barButtonItem systemItem="camera" id="t7K-gK-mXF"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Dr5-tK-sSs"/>
+                                    <barButtonItem title="Album" id="PSX-VB-80v"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="hKl-lF-22g"/>
                                 </items>
                             </toolbar>
                         </subviews>
