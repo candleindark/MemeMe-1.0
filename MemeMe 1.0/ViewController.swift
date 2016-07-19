@@ -12,6 +12,7 @@ class MemeEditorController: UIViewController {
 
     // Mark: Outlets
     @IBOutlet weak var cameraButton: UIBarButtonItem!
+    @IBOutlet weak var albumButton: UIBarButtonItem!
     
     // Mark: Private attributes
     private let imagePickerController = UIImagePickerController()
@@ -27,6 +28,7 @@ class MemeEditorController: UIViewController {
         super.viewWillAppear(animated)
         
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
+        albumButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary)
     }
     
     

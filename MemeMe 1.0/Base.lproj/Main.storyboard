@@ -81,6 +81,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="albumButton" destination="PSX-VB-80v" id="tur-Og-esf"/>
                         <outlet property="cameraButton" destination="t7K-gK-mXF" id="fnm-Ab-Xbt"/>
                     </connections>
                 </viewController>
