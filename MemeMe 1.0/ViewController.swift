@@ -8,11 +8,12 @@
 
 import UIKit
 
-class MemeEditorController: UIViewController {
+class MemeEditorController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     // Mark: Outlets
-    @IBOutlet weak var cameraButton: UIBarButtonItem!
-    @IBOutlet weak var albumButton: UIBarButtonItem!
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var cameraButton: UIBarButtonItem!
+    @IBOutlet private weak var albumButton: UIBarButtonItem!
     
     // Mark: Private attributes
     private let imagePickerController = UIImagePickerController()
@@ -22,6 +23,7 @@ class MemeEditorController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        imagePickerController.delegate = self
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -39,6 +41,12 @@ class MemeEditorController: UIViewController {
             imagePickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         }
         presentViewController(imagePickerController, animated: true, completion: nil)
+    }
+    
+    // MARK: UIImagePickerControllerDelegate methods
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }
 

@@ -91,6 +91,7 @@
                     <connections>
                         <outlet property="albumButton" destination="PSX-VB-80v" id="tur-Og-esf"/>
                         <outlet property="cameraButton" destination="t7K-gK-mXF" id="fnm-Ab-Xbt"/>
+                        <outlet property="imageView" destination="xbt-hr-5Xa" id="q7m-id-EuY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
