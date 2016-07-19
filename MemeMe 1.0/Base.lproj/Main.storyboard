@@ -59,9 +59,17 @@
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="XRi-2i-2LM"/>
-                                    <barButtonItem systemItem="camera" id="t7K-gK-mXF"/>
+                                    <barButtonItem systemItem="camera" id="t7K-gK-mXF">
+                                        <connections>
+                                            <action selector="selectPhoto:" destination="BYZ-38-t0r" id="mQf-Uj-U0V"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Dr5-tK-sSs"/>
-                                    <barButtonItem title="Album" id="PSX-VB-80v"/>
+                                    <barButtonItem title="Album" id="PSX-VB-80v">
+                                        <connections>
+                                            <action selector="selectPhoto:" destination="BYZ-38-t0r" id="ux5-Z9-s2I"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="hKl-lF-22g"/>
                                 </items>
                             </toolbar>

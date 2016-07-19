@@ -31,7 +31,14 @@ class MemeEditorController: UIViewController {
         albumButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary)
     }
     
-    
-    
+    // MARK: Actions
+    @IBAction func selectPhoto(sender: UIBarButtonItem) {
+        if sender == cameraButton {
+            imagePickerController.sourceType = UIImagePickerControllerSourceType.Camera
+        } else {
+            imagePickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        }
+        presentViewController(imagePickerController, animated: true, completion: nil)
+    }
 }
 
