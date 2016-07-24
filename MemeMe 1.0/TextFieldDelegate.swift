@@ -8,6 +8,8 @@
 
 import UIKit
 
+/* A separate instance of this class should be used for each text field to ensure the integrity of attributedPlaceholder
+   of the text field */
 class TextFieldDelegate: NSObject, UITextFieldDelegate {
     var attributedPlaceholder: NSAttributedString?  // For storing the attributed placeholder of a textfield
     
