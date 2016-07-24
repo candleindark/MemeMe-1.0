@@ -41,6 +41,10 @@ class MemeEditorController: UIViewController, UIImagePickerControllerDelegate, U
         topTextField.defaultTextAttributes = textAttributes
         bottomTextField.defaultTextAttributes = textAttributes
         
+        // Set text field alignments to center
+        topTextField.textAlignment = .Center
+        bottomTextField.textAlignment = .Center
+        
         // Set delegates of textfields
         topTextField.delegate = topTextFieldDelegate
         bottomTextField.delegate = bottomTextFieldDelegate
