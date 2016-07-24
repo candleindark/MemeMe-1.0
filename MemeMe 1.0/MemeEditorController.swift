@@ -20,12 +20,27 @@ class MemeEditorController: UIViewController, UIImagePickerControllerDelegate, U
     // Mark: Private attributes
     private let imagePickerController = UIImagePickerController()
     private var adjustedForKeyboard = false
-    
+    private let topTextFieldDelegate = TextFieldDelegate()
+    private let bottomTextFieldDelegate = TextFieldDelegate()
     
     // MARK: UIViewController methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        let textAttributes = [NSStrokeColorAttributeName : UIColor.blackColor(),
+                              NSForegroundColorAttributeName : UIColor.whiteColor(),
+                              NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+                              NSStrokeWidthAttributeName : NSNumber(double: -3.0)]
+        
+        topTextField.attributedPlaceholder = NSAttributedString(string: "TOP", attributes: textAttributes)
+        bottomTextField.attributedPlaceholder = NSAttributedString(string: "BOTTOM", attributes: textAttributes)
+        
+        topTextField.defaultTextAttributes = textAttributes
+        bottomTextField.defaultTextAttributes = textAttributes
+        
+        topTextField.delegate = topTextFieldDelegate
+        bottomTextField.delegate = bottomTextFieldDelegate
+        
         imagePickerController.delegate = self
     }
     
