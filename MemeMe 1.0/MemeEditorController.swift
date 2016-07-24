@@ -75,6 +75,10 @@ class MemeEditorController: UIViewController, UIImagePickerControllerDelegate, U
         presentViewController(imagePickerController, animated: true, completion: nil)
     }
     
+    @IBAction private func shareMeme() {
+        
+    }
+    
     // MARK: UIImagePickerControllerDelegate methods
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
