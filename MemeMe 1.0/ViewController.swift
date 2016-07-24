@@ -45,7 +45,7 @@ class MemeEditorController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     // MARK: Actions
-    @IBAction func selectPhoto(sender: UIBarButtonItem) {
+    @IBAction private func selectPhoto(sender: UIBarButtonItem) {
         if sender == cameraButton {
             imagePickerController.sourceType = UIImagePickerControllerSourceType.Camera
         } else {
