@@ -32,16 +32,19 @@ class MemeEditorController: UIViewController, UIImagePickerControllerDelegate, U
                               NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
                               NSStrokeWidthAttributeName : NSNumber(double: -3.0)]
         
+        // Set placeholders of textfields
         topTextField.attributedPlaceholder = NSAttributedString(string: "TOP", attributes: textAttributes)
         bottomTextField.attributedPlaceholder = NSAttributedString(string: "BOTTOM", attributes: textAttributes)
         
+        // Set default text attributes of textfields
         topTextField.defaultTextAttributes = textAttributes
         bottomTextField.defaultTextAttributes = textAttributes
         
+        // Set delegates of textfields
         topTextField.delegate = topTextFieldDelegate
         bottomTextField.delegate = bottomTextFieldDelegate
         
-        imagePickerController.delegate = self
+        imagePickerController.delegate = self   // Set delegate of image picker
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -49,6 +52,7 @@ class MemeEditorController: UIViewController, UIImagePickerControllerDelegate, U
         
         subscribeToKeyboardNotifications()
         
+        // Enable/disable buttons depending on available resources
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         albumButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary)
     }
@@ -61,11 +65,13 @@ class MemeEditorController: UIViewController, UIImagePickerControllerDelegate, U
     
     // MARK: Actions
     @IBAction private func selectPhoto(sender: UIBarButtonItem) {
+        // Set image picker to the selected source type
         if sender == cameraButton {
             imagePickerController.sourceType = UIImagePickerControllerSourceType.Camera
         } else {
             imagePickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         }
+        
         presentViewController(imagePickerController, animated: true, completion: nil)
     }
     
@@ -89,7 +95,7 @@ class MemeEditorController: UIViewController, UIImagePickerControllerDelegate, U
     
     func keyboardWillShow(notification: NSNotification) {
         
-        let isCurrentAppKeyboard = notification.userInfo![UIKeyboardIsLocalUserInfoKey] as! NSNumber
+        let isCurrentAppKeyboard = notification.userInfo![UIKeyboardIsLocalUserInfoKey] as! NSNumber    // Indicate if the keyboard belongs to the app
         
         if isCurrentAppKeyboard.boolValue { // The given keyboard belongs to the app
             if bottomTextField.isFirstResponder() {
@@ -104,7 +110,7 @@ class MemeEditorController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     func keyboardWillHide(notification: NSNotification) {
-        let isCurrentAppKeyboard = notification.userInfo![UIKeyboardIsLocalUserInfoKey] as! NSNumber
+        let isCurrentAppKeyboard = notification.userInfo![UIKeyboardIsLocalUserInfoKey] as! NSNumber    // Indicate if the keyboard belongs to the app
         
         if isCurrentAppKeyboard.boolValue {
             adjustForKeyboardRemovalIfNeeded(notification)
