@@ -9,21 +9,21 @@
 import UIKit
 
 class TextFieldDelegate: NSObject, UITextFieldDelegate {
-    var attributedPlaceholder: NSAttributedString?
+    var attributedPlaceholder: NSAttributedString?  // For storing the attributed placeholder of a textfield
     
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
         attributedPlaceholder = textField.attributedPlaceholder
-        textField.attributedPlaceholder = nil
+        textField.attributedPlaceholder = nil   // Clear the textfield of its placeholder
         return true
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
-        textField.attributedPlaceholder = attributedPlaceholder
+        textField.attributedPlaceholder = attributedPlaceholder // Restore the placeholder of the textfield
         attributedPlaceholder = nil
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+        textField.resignFirstResponder()    // Dismiss the keyboard
         return true
     }
 }
