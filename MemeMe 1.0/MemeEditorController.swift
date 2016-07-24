@@ -154,7 +154,7 @@ class MemeEditorController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     private func saveMeme(memedImage: UIImage) {
-        let savedMeme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: memedImage)
+        _ = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: memedImage)
     }
 }
 
