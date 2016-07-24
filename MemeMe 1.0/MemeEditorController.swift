@@ -89,6 +89,12 @@ class MemeEditorController: UIViewController, UIImagePickerControllerDelegate, U
         presentViewController(activityViewController, animated: true, completion: nil)
     }
     
+    @IBAction func clearMeme(sender: UIBarButtonItem) {
+        imageView.image = nil
+        topTextField.text = nil
+        bottomTextField.text = nil
+    }
+    
     // MARK: UIImagePickerControllerDelegate methods
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage

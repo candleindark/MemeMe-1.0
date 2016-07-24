@@ -27,7 +27,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="2xo-Ok-Rue"/>
-                                    <barButtonItem systemItem="cancel" id="kBn-aI-89S"/>
+                                    <barButtonItem systemItem="cancel" id="kBn-aI-89S">
+                                        <connections>
+                                            <action selector="clearMeme:" destination="BYZ-38-t0r" id="OLd-Tk-kHB"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HIl-ew-Moq">
