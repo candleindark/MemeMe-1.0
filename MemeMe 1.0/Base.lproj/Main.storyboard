@@ -97,6 +97,7 @@
                         <outlet property="bottomTextField" destination="NCs-G8-DXv" id="LJP-NO-PuG"/>
                         <outlet property="cameraButton" destination="t7K-gK-mXF" id="fnm-Ab-Xbt"/>
                         <outlet property="imageView" destination="xbt-hr-5Xa" id="q7m-id-EuY"/>
+                        <outlet property="memeDisplay" destination="HIl-ew-Moq" id="GbJ-SY-0PX"/>
                         <outlet property="topTextField" destination="PU6-m9-Jo1" id="glf-NI-b3X"/>
                     </connections>
                 </viewController>

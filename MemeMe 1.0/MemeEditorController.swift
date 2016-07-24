@@ -16,6 +16,7 @@ class MemeEditorController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet private weak var albumButton: UIBarButtonItem!
     @IBOutlet private weak var topTextField: UITextField!
     @IBOutlet private weak var bottomTextField: UITextField!
+    @IBOutlet private weak var memeDisplay: UIView!
     
     // Mark: Private attributes
     private let imagePickerController = UIImagePickerController()
@@ -26,7 +27,7 @@ class MemeEditorController: UIViewController, UIImagePickerControllerDelegate, U
     // MARK: UIViewController methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let textAttributes = [NSStrokeColorAttributeName : UIColor.blackColor(),
                               NSForegroundColorAttributeName : UIColor.whiteColor(),
                               NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
@@ -76,7 +77,16 @@ class MemeEditorController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction private func shareMeme() {
-        
+        let memedImage = generateMemedImage()
+        let activityViewController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
+        activityViewController.completionWithItemsHandler = {
+            activityType, completed, returnedItems, activityError in
+            
+            if completed {
+                self.saveMeme(memedImage)
+            }
+        }
+        presentViewController(activityViewController, animated: true, completion: nil)
     }
     
     // MARK: UIImagePickerControllerDelegate methods
@@ -131,6 +141,20 @@ class MemeEditorController: UIViewController, UIImagePickerControllerDelegate, U
     private func getKeyboardHeight(notification: NSNotification) -> CGFloat {
         let keyboardSize = notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue    // of CGRect
         return keyboardSize.CGRectValue().height
+    }
+    
+    private func generateMemedImage() -> UIImage {
+        // Render image
+        UIGraphicsBeginImageContext(memeDisplay.frame.size)
+        memeDisplay.drawViewHierarchyInRect(CGRect(origin: CGPoint(x: 0.0, y: 0.0), size: memeDisplay.frame.size), afterScreenUpdates: true)
+        let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return memedImage
+    }
+    
+    private func saveMeme(memedImage: UIImage) {
+        let savedMeme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: memedImage)
     }
 }
 
