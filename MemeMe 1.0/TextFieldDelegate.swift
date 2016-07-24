@@ -20,8 +20,6 @@ class TextFieldDelegate: NSObject, UITextFieldDelegate {
     func textFieldDidEndEditing(textField: UITextField) {
         textField.attributedPlaceholder = attributedPlaceholder // Restore the placeholder of the textfield
         attributedPlaceholder = nil
-        
-        textField.center.x = textField.superview!.center.x  // Re-align the textfield to its superview
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
