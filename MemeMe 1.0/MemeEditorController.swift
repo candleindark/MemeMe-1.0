@@ -24,21 +24,18 @@ class MemeEditorController: UIViewController, UIImagePickerControllerDelegate, U
     private var adjustedForKeyboard = false
     private let topTextFieldDelegate = TextFieldDelegate()
     private let bottomTextFieldDelegate = TextFieldDelegate()
+    private let textAttributes = [NSStrokeColorAttributeName : UIColor.blackColor(),
+                          NSForegroundColorAttributeName : UIColor.whiteColor(),
+                          NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+                          NSStrokeWidthAttributeName : NSNumber(double: -3.0)]
     
     // MARK: UIViewController methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let textAttributes = [NSStrokeColorAttributeName : UIColor.blackColor(),
-                              NSForegroundColorAttributeName : UIColor.whiteColor(),
-                              NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-                              NSStrokeWidthAttributeName : NSNumber(double: -3.0)]
-        
-        // Set numerous properties of a textfield with given arguments
+        // To set attributedPlaceholder of a text field and the delegate of the text field after the loading of the view
         func setTextField(textField: UITextField, placeholder: String, delegate: TextFieldDelegate) {
             textField.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: textAttributes)
-            textField.defaultTextAttributes = textAttributes
-            textField.textAlignment = .Center
             textField.delegate = delegate
         }
         
@@ -57,6 +54,16 @@ class MemeEditorController: UIViewController, UIImagePickerControllerDelegate, U
         // Enable/disable buttons depending on available resources
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         albumButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary)
+        
+        // To set defaultTextAttributes of a text field and re-align the text field in each appearance of the view
+        func setTextField(textField: UITextField) {
+            textField.defaultTextAttributes = textAttributes
+            textField.textAlignment = .Center
+        }
+        
+        // Set text fields
+        setTextField(topTextField)
+        setTextField(bottomTextField)
     }
     
     override func viewWillDisappear(animated: Bool) {
