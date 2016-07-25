@@ -41,12 +41,12 @@
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="492"/>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="PU6-m9-Jo1">
-                                        <rect key="frame" x="276" y="50" width="8" height="17"/>
+                                        <rect key="frame" x="15" y="50" width="530" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="NCs-G8-DXv">
-                                        <rect key="frame" x="276" y="410" width="8" height="17"/>
+                                        <rect key="frame" x="15" y="410" width="530" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                     </textField>
@@ -54,16 +54,16 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="PU6-m9-Jo1" firstAttribute="centerX" secondItem="HIl-ew-Moq" secondAttribute="centerX" id="HbE-jf-RMv"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PU6-m9-Jo1" secondAttribute="trailing" constant="15" id="PTv-WH-zSY"/>
+                                    <constraint firstAttribute="trailing" secondItem="PU6-m9-Jo1" secondAttribute="trailing" constant="15" id="PTv-WH-zSY"/>
                                     <constraint firstAttribute="bottom" secondItem="NCs-G8-DXv" secondAttribute="bottom" constant="65" id="QFS-S0-pWg"/>
-                                    <constraint firstItem="NCs-G8-DXv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HIl-ew-Moq" secondAttribute="leading" constant="15" id="UOY-7t-tOk"/>
+                                    <constraint firstItem="NCs-G8-DXv" firstAttribute="leading" secondItem="HIl-ew-Moq" secondAttribute="leading" constant="15" id="UOY-7t-tOk"/>
                                     <constraint firstItem="xbt-hr-5Xa" firstAttribute="leading" secondItem="HIl-ew-Moq" secondAttribute="leading" id="URe-t7-yhc"/>
                                     <constraint firstItem="PU6-m9-Jo1" firstAttribute="top" secondItem="HIl-ew-Moq" secondAttribute="top" constant="50" id="UxX-rU-nj4"/>
                                     <constraint firstAttribute="trailing" secondItem="xbt-hr-5Xa" secondAttribute="trailing" id="es9-Oq-ESH"/>
                                     <constraint firstItem="xbt-hr-5Xa" firstAttribute="top" secondItem="HIl-ew-Moq" secondAttribute="top" id="f53-DB-vOF"/>
-                                    <constraint firstItem="PU6-m9-Jo1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HIl-ew-Moq" secondAttribute="leading" constant="15" id="fNX-if-stJ"/>
+                                    <constraint firstItem="PU6-m9-Jo1" firstAttribute="leading" secondItem="HIl-ew-Moq" secondAttribute="leading" constant="15" id="fNX-if-stJ"/>
                                     <constraint firstItem="NCs-G8-DXv" firstAttribute="centerX" secondItem="HIl-ew-Moq" secondAttribute="centerX" id="rid-47-tNi"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NCs-G8-DXv" secondAttribute="trailing" constant="15" id="uRl-2L-Kpa"/>
+                                    <constraint firstAttribute="trailing" secondItem="NCs-G8-DXv" secondAttribute="trailing" constant="15" id="uRl-2L-Kpa"/>
                                     <constraint firstAttribute="bottom" secondItem="xbt-hr-5Xa" secondAttribute="bottom" id="xAe-zA-z3v"/>
                                 </constraints>
                             </view>
