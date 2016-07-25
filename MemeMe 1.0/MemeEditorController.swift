@@ -17,6 +17,7 @@ class MemeEditorController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet private weak var topTextField: UITextField!
     @IBOutlet private weak var bottomTextField: UITextField!
     @IBOutlet private weak var memeDisplay: UIView!
+    @IBOutlet private weak var activityButton: UIBarButtonItem!
     
     // Mark: Private attributes
     private let imagePickerController = UIImagePickerController()
@@ -93,11 +94,13 @@ class MemeEditorController: UIViewController, UIImagePickerControllerDelegate, U
         imageView.image = nil
         topTextField.text = nil
         bottomTextField.text = nil
+        activityButton.enabled = false
     }
     
     // MARK: UIImagePickerControllerDelegate methods
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        activityButton.enabled = true
         dismissViewControllerAnimated(true, completion: nil)
     }
     
