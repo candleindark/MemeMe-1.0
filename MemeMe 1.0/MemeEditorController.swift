@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MemeEditorController.swift
 //  MemeMe 1.0
 //
 //  Created by Isaac To on 7/16/16.
