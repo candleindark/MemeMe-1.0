@@ -53,6 +53,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="PU6-m9-Jo1" firstAttribute="top" secondItem="HIl-ew-Moq" secondAttribute="top" constant="25" id="EO4-lW-K4F"/>
                                     <constraint firstItem="PU6-m9-Jo1" firstAttribute="centerX" secondItem="HIl-ew-Moq" secondAttribute="centerX" id="HbE-jf-RMv"/>
                                     <constraint firstAttribute="trailing" secondItem="PU6-m9-Jo1" secondAttribute="trailing" constant="15" id="PTv-WH-zSY"/>
                                     <constraint firstAttribute="bottom" secondItem="NCs-G8-DXv" secondAttribute="bottom" constant="65" id="QFS-S0-pWg"/>
@@ -65,7 +66,20 @@
                                     <constraint firstItem="NCs-G8-DXv" firstAttribute="centerX" secondItem="HIl-ew-Moq" secondAttribute="centerX" id="rid-47-tNi"/>
                                     <constraint firstAttribute="trailing" secondItem="NCs-G8-DXv" secondAttribute="trailing" constant="15" id="uRl-2L-Kpa"/>
                                     <constraint firstAttribute="bottom" secondItem="xbt-hr-5Xa" secondAttribute="bottom" id="xAe-zA-z3v"/>
+                                    <constraint firstAttribute="bottom" secondItem="NCs-G8-DXv" secondAttribute="bottom" constant="30" id="xZT-O3-Owu"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="EO4-lW-K4F"/>
+                                        <exclude reference="xZT-O3-Owu"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="EO4-lW-K4F"/>
+                                        <include reference="xZT-O3-Owu"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Fm-5Y-nln">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
