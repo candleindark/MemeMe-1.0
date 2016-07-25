@@ -33,21 +33,17 @@ class MemeEditorController: UIViewController, UIImagePickerControllerDelegate, U
                               NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
                               NSStrokeWidthAttributeName : NSNumber(double: -3.0)]
         
-        // Set placeholders of textfields
-        topTextField.attributedPlaceholder = NSAttributedString(string: "TOP", attributes: textAttributes)
-        bottomTextField.attributedPlaceholder = NSAttributedString(string: "BOTTOM", attributes: textAttributes)
+        // Set numerous properties of a textfield with given arguments
+        func setTextField(textField: UITextField, placeholder: String, delegate: TextFieldDelegate) {
+            textField.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: textAttributes)
+            textField.defaultTextAttributes = textAttributes
+            textField.textAlignment = .Center
+            textField.delegate = delegate
+        }
         
-        // Set default text attributes of textfields
-        topTextField.defaultTextAttributes = textAttributes
-        bottomTextField.defaultTextAttributes = textAttributes
-        
-        // Set text field alignments to center
-        topTextField.textAlignment = .Center
-        bottomTextField.textAlignment = .Center
-        
-        // Set delegates of textfields
-        topTextField.delegate = topTextFieldDelegate
-        bottomTextField.delegate = bottomTextFieldDelegate
+        // Set text fields
+        setTextField(topTextField, placeholder: "TOP", delegate: topTextFieldDelegate)
+        setTextField(bottomTextField, placeholder: "BOTTOM", delegate: bottomTextFieldDelegate)
         
         imagePickerController.delegate = self   // Set delegate of image picker
     }
