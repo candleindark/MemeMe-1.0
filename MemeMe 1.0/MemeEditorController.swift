@@ -90,7 +90,7 @@ class MemeEditorController: UIViewController, UIImagePickerControllerDelegate, U
         presentViewController(activityViewController, animated: true, completion: nil)
     }
     
-    @IBAction func clearMeme(sender: UIBarButtonItem) {
+    @IBAction private func clearMeme(sender: UIBarButtonItem) {
         imageView.image = nil
         topTextField.text = nil
         bottomTextField.text = nil
