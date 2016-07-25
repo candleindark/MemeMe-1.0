@@ -23,7 +23,7 @@
                                 <items>
                                     <barButtonItem enabled="NO" systemItem="action" id="twN-FV-3Nz">
                                         <connections>
-                                            <action selector="shareMeme" destination="BYZ-38-t0r" id="qpC-Xx-zGY"/>
+                                            <action selector="performActivity" destination="BYZ-38-t0r" id="QLQ-49-ms1"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="2xo-Ok-Rue"/>
